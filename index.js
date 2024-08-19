@@ -8,6 +8,8 @@ function startDrag (event) {
 
     //get the first article element 
     const actualCard = event.target.closest('article');
+
+    if(!actualCard) return
     //get initial position
     const startX = event.pageX ?? event.touches[0].pageX;
     // listen de mouse and touche movement
